@@ -16,4 +16,3 @@
 * **Sistem Operasi:** [Windows 11 Home Single Language 64-bit(10.0, build 26200)]
 * **Kapasitas RAM:** [16384MB]
 * **Versi Node.js:** [v24.21.0]
-
