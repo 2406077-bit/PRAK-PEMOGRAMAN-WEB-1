@@ -2,7 +2,7 @@
 **Informasi Mahasiswa:**
 * **Nama:** [Rio Cahya Ramadhan]
 * **NIM:** [2406077]
-* **Kelas/Prodi:** Teknik Informatika - ITG
+* **Kelas/Prodi:** Teknik Informatika C - ITG
 * **Kode MK:** IFRWP5151
 ---
 ## Catatan Modul 1
