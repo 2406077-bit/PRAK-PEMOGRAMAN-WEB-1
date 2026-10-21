@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Portfolio Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <p class="eyebrow">PROJECT MANAGEMENT</p>
+      <h1>Interactive Portfolio Tracker</h1>
+      <p>Kelola proyek, pantau anggaran, dan perbarui status proyekmu.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats-grid" aria-label="Statistik proyek">
+      <article class="stat-card">
+        <p>Total Proyek</p>
+        <h2 id="totalProjects">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Proyek Selesai</p>
+        <h2 id="completedProjects">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Dalam Pengerjaan</p>
+        <h2 id="ongoingProjects">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Total Anggaran</p>
+        <h2 id="totalBudget">Rp0</h2>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Tambah Proyek Baru</h2>
+      <p class="section-desc">Isi informasi proyek di bawah ini.</p>
+
+      <form id="projectForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="projectTitle">Judul Proyek</label>
+            <input
+              type="text"
+              id="projectTitle"
+              placeholder="Contoh: Website Portfolio"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="projectCategory">Kategori</label>
+            <select id="projectCategory" required>
+              <option value="Web App">Web App</option>
+              <option value="Mobile App">Mobile App</option>
+              <option value="Desktop App">Desktop App</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="projectBudget">Estimasi Anggaran (Rp)</label>
+            <input
+              type="number"
+              id="projectBudget"
+              placeholder="Contoh: 1500000"
+              min="1"
+              step="any"
+              required
+            >
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="projectCompleted">
+            <label for="projectCompleted">Sudah Selesai</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          + Tambah Proyek
+        </button>
+      </form>
+    </section>
+
+    <section class="project-section">
+      <div class="section-heading">
+        <div>
+          <h2>Daftar Proyek</h2>
+          <p class="section-desc">Cari dan kelola semua proyekmu.</p>
+        </div>
+        <span id="projectCount" class="count-badge">0 proyek</span>
+      </div>
+
+      <div class="search-box">
+        <label for="searchInput" class="sr-only">Cari nama proyek</label>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Cari nama proyek..."
+        >
+      </div>
+
+      <div id="projectList" class="project-grid"></div>
+      <p id="emptyMessage" class="empty-message" hidden>
+        Proyek tidak ditemukan.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Interactive Portfolio Tracker &copy; 2026</p>
+  </footer>
+</body>
+</html>
