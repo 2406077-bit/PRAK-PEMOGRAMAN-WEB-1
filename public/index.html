@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUD Mahasiswa - JavaScript & Laragon</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Manajemen Data Mahasiswa</h2>
+
+        <p class="subtitle">
+            Sistem CRUD 100% JavaScript: Node.js, Express, Fetch API & MySQL Laragon
+        </p>
+
+        <!-- Alert -->
+        <div id="alertMessage"></div>
+
+        <!-- FORM -->
+        <div class="form-card">
+
+            <h3 id="formTitle">Tambah Data Mahasiswa</h3>
+
+            <form id="mhsForm">
+
+                <input type="hidden" id="mhsId">
+
+                <div class="form-row">
+
+                    <div class="form-group flex-1">
+
+                        <label for="nim">
+                            NIM <span class="req">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nim"
+                            placeholder="Contoh: 2406077"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group flex-1">
+
+                        <label for="nama">
+                            Nama <span class="req">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            placeholder="Masukkan nama mahasiswa"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group flex-1">
+
+                        <label for="jurusan">
+                            Jurusan <span class="req">*</span>
+                        </label>
+
+                        <select id="jurusan" required>
+
+                            <option value="">
+                                -- Pilih Jurusan --
+                            </option>
+
+                            <option value="Teknik Informatika">
+                                Teknik Informatika
+                            </option>
+
+                            <option value="Sistem Informasi">
+                                Sistem Informasi
+                            </option>
+
+                            <option value="Manajemen Informatika">
+                                Manajemen Informatika
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group flex-1">
+
+                        <label for="email">
+                            Email <span class="req">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="contoh@email.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="btnSubmit"
+                    >
+                        Simpan Data
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="btnCancel"
+                        style="display: none;"
+                    >
+                        Batal
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- TABLE -->
+        <div class="table-card">
+
+            <div class="table-header">
+
+                <div>
+                    <h3>Data Mahasiswa</h3>
+
+                    <p>
+                        Total Mahasiswa:
+                        <span id="totalMahasiswa">0</span>
+                    </p>
+                </div>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari NIM atau nama..."
+                >
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>No</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Jurusan</th>
+                            <th>Email</th>
+                            <th>Aksi</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="mhsTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
